@@ -23,6 +23,8 @@ for item in projectnames:
     os.system('git add . && git commit . -m "update ' + item + '"')
     print(item)
   else:
+    if not os.path.isfile(item + '/.olauth'):
+      os.system('cp .olauth "' + item + '/.olauth"')
     os.system('cd "' + item + '" && git pull')
     os.system('cd "' + item + '" && ols')
     os.system('git add . && git commit . -m "update ' + item + '"')
