@@ -7,7 +7,7 @@ i'll explain a possible way to use this here:
 2. proper ssh authentication for your github account so you dont have to enter your password every time you push (technically only necessary for automated execution)
 3. make a private (or public if you want all your projects to be public lol) repo and clone it with something like ``git clone git@github.com:user/project-repo.git``
 5. install ols (``pip3 install overleaf-sync``/``pip install overleaf-sync``)
-6. use ols to login to your account with ``ols login``
+6. use ols to login to your account with ``cd project-repo && ols login``
 7. replace USERNAME and PASSWORD in ``run.py`` to your login info for overleaf.com
 ## usage
 - ``cd project-repo && python3 run.py`` this will first sync with the git repo, then sync ALL your projects on overleaf and then commit and push to your repo (if anything changed)
